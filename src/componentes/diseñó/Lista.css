@@ -1,0 +1,104 @@
+.expediente-page {
+    background: white;
+    color: black;
+    min-height: 100vh;
+  }
+  
+  .header {
+    background-color: #192ddf;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .back-link {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    margin: 20px;
+  }
+  
+  .link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .search-form {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-select {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .form-control {
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table td {
+    padding: 8px;
+  }
+  
+  .badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .badge-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .badge-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .badge-warning {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 8px;
+  }
+  

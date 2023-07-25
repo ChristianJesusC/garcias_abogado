@@ -1,0 +1,6 @@
+.app-container {
+  background-image: url('../img/Fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

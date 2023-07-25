@@ -1,0 +1,89 @@
+/* Estilos para el contenedor principal */
+.editar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el formulario */
+  .editar-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para las secciones del formulario */
+  .editar-form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para las etiquetas del formulario */
+  .editar-form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los inputs del formulario */
+  .editar-form-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para el textarea del formulario */
+  .editar-form-textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  /* Estilos para el select del formulario */
+  .editar-form-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para los botones del formulario */
+  .editar-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .editar-form-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Estilos para los botones de agregar y eliminar firma */
+  .editar-form-btn:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el botón de agregar nuevo cliente */
+  .editar-form-btn.add-cliente-btn {
+    margin-top: 10px;
+    background-color: #28a745;
+  }
+  
+  /* Estilos para el mensaje de error */
+  .editar-form-error {
+    color: red;
+    margin-top: 5px;
+  }
+  

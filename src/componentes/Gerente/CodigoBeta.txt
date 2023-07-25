@@ -1,0 +1,12 @@
+<td>
+                      <Button className="btn-danger" onClick={() => eliminarCaso(caso.idCasos)}>Eliminar</Button>
+                      <button className="btn btn-primary ms-2" style={{ marginLeft: '10px' }} onClick={() => handleEdit(caso.idCasos, caso.idAbogados)}>
+                      Editar Archivo
+                      </button></td>
+
+
+                      <td>
+                    <button className="btn btn-primary ms-2" style={{ marginLeft: '10px' }} onClick={() => handleEdit(caso.idCasos, caso.idAbogados)}>
+                      Editar Archivo
+                    </button>
+                  </td>
