@@ -9,7 +9,7 @@ const MiniMN = () => {
   useEffect(() => {
     const idAbogados = localStorage.getItem('idAbogado');
     
-    axios.get(`http://localhost:8081/abogados/${idAbogados}`)
+    axios.get(`https://server-api-6wm6.onrender.com/abogados/${idAbogados}`)
       .then((response) => {
         setAbogado(response.data);
       })
