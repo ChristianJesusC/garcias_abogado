@@ -27,7 +27,7 @@ const CasosPage = () => {
       confirmButtonColor: "#d33",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:8081/ObCliente/${id}`)
+        axios.delete(`https://server-api-6wm6.onrender.com/ObCliente/${id}`)
           .then((response) => {
             cargarClientes();
             Swal.fire(
@@ -49,7 +49,7 @@ const CasosPage = () => {
   };
 
   const cargarClientes = () => {
-    axios.get("http://localhost:8081/ObCliente")
+    axios.get("https://server-api-6wm6.onrender.com/ObCliente")
       .then((response) => {
         setCliente(response.data);
       })

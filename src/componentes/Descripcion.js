@@ -42,7 +42,7 @@ const Descripcion = () => {
   const cargarExpediente = (idCasos) => {
     setTimeout(() => {
       axios
-        .get(`http://localhost:8081/casos/${idCasos}`)
+        .get(`https://server-api-6wm6.onrender.com/casos/${idCasos}`)
         .then((response) => {
           setExpediente(response.data);
           obtenerDatosCliente(response.data.idCliente);
@@ -63,7 +63,7 @@ const Descripcion = () => {
   };
 
   const obtenerDatosCliente = (idClientes) => {
-    axios.get(`http://localhost:8081/Obcliente/${idClientes}`)
+    axios.get(`https://server-api-6wm6.onrender.com/Obcliente/${idClientes}`)
       .then((response) => {
         setDatosCliente(response.data);
       })
@@ -73,7 +73,7 @@ const Descripcion = () => {
   };
 
   const obtenerDatosAbogado = (idAbogados) => {
-    axios.get(`http://localhost:8081/abogados/${idAbogados}`)
+    axios.get(`https://server-api-6wm6.onrender.com/abogados/${idAbogados}`)
       .then((response) => {
         setInfoAbogado(response.data);
       })

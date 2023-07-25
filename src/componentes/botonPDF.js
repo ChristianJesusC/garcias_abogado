@@ -22,7 +22,7 @@ const MyDocument = ({id}) => {
   const [firma4,setFirma4] = useState('');
 
   function loadData() {
-    Axios.get(`http://localhost:8081/casos/${id}`)
+    Axios.get(`https://server-api-6wm6.onrender.com/casos/${id}`)
       .then((response) => {
         setTitulo(response.data.Titulo);
         setSubtitulo(response.data.Subtitulo);
