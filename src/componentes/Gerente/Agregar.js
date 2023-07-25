@@ -27,7 +27,7 @@ const AgregarAbogado = () => {
       return;
     }
   
-    axios.post("https://server-api-6wm6.onrender.com/implementar", {
+    axios.post("http://localhost:8081/implementar", {
         nombre: nombre,
         apePat: apellidoPaterno,
         apeMat: apellidoMaterno,

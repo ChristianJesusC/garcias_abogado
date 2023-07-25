@@ -43,7 +43,7 @@ const Visualizar = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://server-api-6wm6.onrender.com/abogados/${id}`)
+          .delete(`http://localhost:8081/abogados/${id}`)
           .then(() => {
             cargarAbogados();
             Swal.fire(

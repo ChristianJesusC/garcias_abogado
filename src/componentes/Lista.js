@@ -17,7 +17,7 @@ const CasosPage = () => {
   };
 
   const cargarCasos = () => {
-    axios.get("https://server-api-6wm6.onrender.com/visualCaso")
+    axios.get("http://localhost:8081/visualCaso")
       .then((response) => {
         setCasosData(response.data);
       })
