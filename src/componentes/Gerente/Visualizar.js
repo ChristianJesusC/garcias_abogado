@@ -21,7 +21,7 @@ const Visualizar = () => {
   }, [currentPage]);
 
   const cargarAbogados = () => {
-    axios.get("http://localhost:8081/visualizar")
+    axios.get("https://server-api-6wm6.onrender.com/visualizar")
       .then((response) => {
         setAbogadoList(response.data);
       })
@@ -43,7 +43,7 @@ const Visualizar = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8081/abogados/${id}`)
+          .delete(`https://server-api-6wm6.onrender.com/abogados/${id}`)
           .then(() => {
             cargarAbogados();
             Swal.fire(

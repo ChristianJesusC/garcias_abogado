@@ -50,7 +50,7 @@
 
     const cargarClientes = () => {
       axios
-        .get('http://localhost:8081/Obcliente')
+        .get('https://server-api-6wm6.onrender.com/Obcliente')
         .then((response) => {
           setClientes(response.data);
         })

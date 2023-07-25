@@ -28,7 +28,7 @@ const Login = () => {
 
   const inicio = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:8081/conexion", { email, password })
+    axios.post("https://server-api-6wm6.onrender.com/conexion", { email, password })
       .then((res) => {
         if (res.data.mensaje === "Inicio fallido") {
           Swal.fire("Error de inicio de sesión", "Verifica tus datos.", "error");

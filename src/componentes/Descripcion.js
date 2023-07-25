@@ -42,7 +42,7 @@ const Descripcion = () => {
   const cargarExpediente = (idCasos) => {
     setTimeout(() => {
       axios
-        .get(`http://localhost:8081/casos/${idCasos}`)
+        .get(`https://server-api-6wm6.onrender.com/casos/${idCasos}`)
         .then((response) => {
           setExpediente(response.data);
           obtenerDatosCliente(response.data.idCliente);
