@@ -323,8 +323,6 @@ const Editar = () => {
             placeholder="Ingrese una descripción del expediente"
           />
         </div>
-
-        {/* Selección de cliente */}
         <div className="editar-form-section">
           <div className="editar-form-label">Cliente:</div>
           <select

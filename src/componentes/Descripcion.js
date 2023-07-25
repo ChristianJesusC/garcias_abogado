@@ -3,6 +3,7 @@ import { Button, Container, Row, Col, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MyDocument from './botonPDF';
 
 const LoadingAnimation = () => (
   <div className="vh-100 d-flex align-items-center justify-content-center">
@@ -17,6 +18,7 @@ const Descripcion = () => {
   const [datosCliente, setDatosCliente] = useState(null);
   const [infoAbogado, setInfoAbogado] = useState(null);
   const ocupacion = localStorage.getItem('ocupacion');
+  const [idcaso,setIdCaso] = useState(0);
 
   useEffect(() => {
     const idCasos = localStorage.getItem('idCasos');
@@ -24,6 +26,7 @@ const Descripcion = () => {
     const idAbogados = localStorage.getItem('idAbogado');
 
     if (idCasos && idClientes && idAbogados) {
+      setIdCaso(idCasos);
       cargarExpediente(idCasos);
     }
   }, []);
@@ -187,8 +190,13 @@ const Descripcion = () => {
         </div>
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <Button onClick={redireccion} variant="primary">Volver</Button>
+          <br/>
+          <br/>
+          <Button>
+          <MyDocument id={idcaso}/>
+          </Button>x|
+          <br/>
         </div>
-        <br/>
       </div>
     </Container>
   );
