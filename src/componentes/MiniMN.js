@@ -32,7 +32,7 @@ const MiniMN = () => {
       <div className="d-flex flex-column justify-content-center mt-3">
         <Link to="/menu" className="btn btn-primary mb-2" style={{ backgroundColor: '#192DDF' }}>Agregar Expediente</Link>
         <Link to="/lista" className="btn btn-primary" style={{ backgroundColor: '#192DDF' }}>Historial/Lista de expedientes</Link>
-        <Link to="/" className="btn btn-danger mt-4">Cerrar sesión</Link>
+        <Link to='/' className="btn btn-danger mt-4">Salir</Link>
       </div>
     </div>
   );

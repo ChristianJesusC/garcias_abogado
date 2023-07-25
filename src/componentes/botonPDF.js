@@ -45,13 +45,15 @@ const MyDocument = ({id}) => {
     loadData();
   },[])
 
-  const descargar = () => {
+const descargar = () => {
 
     const doc = new jsPDF();
     const ancho = doc.internal.pageSize.getWidth();
     const alto = doc.internal.pageSize.getHeight();
     let Yactual;
     let limite;
+
+    
     
 
     doc.setFontSize(12);
@@ -107,10 +109,17 @@ const MyDocument = ({id}) => {
     }
 
     if(firma1){
+      doc.text(firma1,((ancho - doc.getTextWidth(firma1))/2),Yactual);
+      Yactual += 20;
+      limite -= 20;
+      if(limite <= 20){
+        doc.addPage();
+        Yactual = 20;
+        limite = alto - Yactual;
+      }
 
       if(firma2){
-        doc.text(firma1,((ancho - doc.getTextWidth(firma1))/3.5),Yactual);
-        doc.text(firma2,((ancho - doc.getTextWidth(firma2))/1.5),Yactual);
+        doc.text(firma2,((ancho - doc.getTextWidth(firma2))/2),Yactual);
         Yactual += 20;
         limite -= 20;
         if(limite <= 20){
@@ -118,19 +127,18 @@ const MyDocument = ({id}) => {
           Yactual = 20;
           limite = alto - Yactual;
         }
+      }
         if(firma3){
+          doc.text(firma3,((ancho - doc.getTextWidth(firma3))/2),Yactual);
+          Yactual += 20;
+          limite -= 20;
+          if(limite <= 20){
+            doc.addPage();
+            Yactual = 20;
+            limite = alto - Yactual;
+          }
           if(firma4){
-            doc.text(firma3,((ancho - doc.getTextWidth(firma3))/3.5),Yactual);
-            doc.text(firma4,((ancho - doc.getTextWidth(firma4))/1.5),Yactual);
-            Yactual += 20;
-            limite -= 20;
-            if(limite <= 20){
-              doc.addPage();
-              Yactual = 20;
-              limite = alto - Yactual;
-            }
-          }else{
-            doc.text(firma3,((ancho - doc.getTextWidth(firma3))/2),Yactual);
+            doc.text(firma4,((ancho - doc.getTextWidth(firma4))/2),Yactual);
             Yactual += 20;
             limite -= 20;
             if(limite <= 20){
@@ -139,16 +147,6 @@ const MyDocument = ({id}) => {
               limite = alto - Yactual;
             }
           }
-        }
-      }else{
-        doc.text(firma1,((ancho - doc.getTextWidth(firma1))/2),Yactual);
-        Yactual += 20;
-        limite -= 20;
-        if(limite <= 20){
-          doc.addPage();
-          Yactual = 20;
-          limite = alto - Yactual;
-        }
       }
 
     }
