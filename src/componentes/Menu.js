@@ -147,7 +147,7 @@
       const fechaFormateadaSegunda = formatearFecha(SegundaFecha);
 
       axios
-        .post('http://localhost:8081/agregarCaso', {
+        .post('https://server-api-6wm6.onrender.com/agregarCaso', {
           Titulo: Titulo,
           Subtitulo: Subtitulo,
           TipoJuicio: TipoJuicio,
