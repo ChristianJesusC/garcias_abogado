@@ -192,9 +192,7 @@ const Descripcion = () => {
           <Button onClick={redireccion} variant="primary">Volver</Button>
           <br/>
           <br/>
-          <Button>
           <MyDocument id={idcaso}/>
-          </Button>x|
           <br/>
         </div>
       </div>
