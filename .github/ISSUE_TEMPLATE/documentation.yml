@@ -1,0 +1,59 @@
+name: Documentación
+description: Propón una corrección o mejora en la documentación del proyecto
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de solicitud
+      options:
+        - Corrección de un error en la documentación
+        - Información faltante
+        - Contenido desactualizado
+        - Mejora de redacción
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Documento o sección afectada
+      description: Ruta del archivo o enlace (por ejemplo, `README.md` o el apartado de instalación).
+    validations:
+      required: true
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué falta o qué está mal
+      description: Describe qué información falta o qué es incorrecto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta de cambio
+      description: Si tienes el texto sugerido, pégalo aquí.
+
+  - type: dropdown
+    id: audiencia
+    attributes:
+      label: Audiencia
+      description: ¿Para quién es esta documentación?
+      options:
+        - Usuarios del despacho
+        - Gerencia
+        - Desarrolladores
+        - Otro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: colaboracion
+    attributes:
+      label: Colaboración
+      options:
+        - label: Puedo redactar el cambio y abrir un PR si el equipo lo aprueba

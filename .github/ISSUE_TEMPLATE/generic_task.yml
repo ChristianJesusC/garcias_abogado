@@ -1,0 +1,86 @@
+name: Tarea general
+description: Registra una tarea de seguridad, operaciones, calidad, dependencias u otra
+title: "[Tarea]: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Advertencia:** no pegues contraseñas, claves, tokens, cadenas de conexión ni datos personales de clientes en este issue. Describe dónde están y quién puede rotarlos.
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoría
+      options:
+        - General
+        - Seguridad / secreto expuesto
+        - Operaciones
+        - Cumplimiento
+        - Calidad
+        - Dependencias
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: resumen
+    attributes:
+      label: Resumen
+      description: Una frase que describa la tarea.
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+    validations:
+      required: true
+
+  - type: textarea
+    id: ubicacion
+    attributes:
+      label: Ubicación
+      description: Archivo, ruta, URL o servicio afectado. Nunca incluyas el valor del secreto.
+
+  - type: dropdown
+    id: exposicion
+    attributes:
+      label: Exposición pública
+      description: ¿El problema es visible fuera del equipo (repositorio público, sitio en producción, etc.)?
+      options:
+        - Sí
+        - No
+        - No sé
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: Urgencia
+      options:
+        - Inmediata
+        - Esta semana
+        - Cuando sea posible
+    validations:
+      required: true
+
+  - type: textarea
+    id: acciones
+    attributes:
+      label: Acciones inmediatas
+      description: Qué se ha hecho ya o qué debe hacerse primero.
+
+  - type: input
+    id: responsable
+    attributes:
+      label: Responsable
+      description: Persona o equipo que da seguimiento.
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia
+      description: Enlaces, capturas o registros. Recorta cualquier dato sensible antes de pegarlo.

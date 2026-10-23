@@ -1,0 +1,93 @@
+name: Reporte de error
+description: Reporta un fallo en la aplicación del despacho
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar. Completa los campos con el mayor detalle posible.
+        **No pegues contraseñas, tokens ni datos personales de clientes en este issue.**
+
+  - type: checkboxes
+    id: comprobaciones
+    attributes:
+      label: Comprobaciones previas
+      options:
+        - label: Revisé los issues abiertos y no existe uno igual
+          required: true
+        - label: Probé con la última versión de la rama `develop`
+          required: true
+
+  - type: textarea
+    id: resumen
+    attributes:
+      label: Resumen
+      description: Describe el problema en una o dos frases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. Ir a ...
+        2. Hacer clic en ...
+        3. Ver ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado actual
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: Severidad
+      options:
+        - Bloqueante
+        - Alta
+        - Media
+        - Baja
+        - No sé
+    validations:
+      required: true
+
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Versión y entorno
+      description: Navegador, sistema operativo y rama o commit de la app.
+      placeholder: "Chrome 124 · Windows 11 · develop (e26a51b)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia
+      description: Capturas de pantalla, mensajes de consola o registros. Revisa que no incluyan datos sensibles.
+
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas adicionales
+
+  - type: checkboxes
+    id: colaboracion
+    attributes:
+      label: Disposición a colaborar
+      options:
+        - label: Puedo probar una corrección o dar más detalles si el equipo lo necesita
